@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier le portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-body">
+
+<header class="navbar">
+    <div class="logo">Josue<span>Dev</span></div>
+    <nav>
+        <a href="index.html">Voir le portfolio</a>
+    </nav>
+</header>
+
+<main class="admin-container">
+    <h1>Modifier le portfolio</h1>
+    <p class="note">
+        Ici tu peux modifier les anciens projets, changer leurs textes, ajouter/changer leurs images, ajouter un nouveau projet ou supprimer un projet.
+    </p>
+
+    <section class="admin-card">
+        <h2>Image de fond de l’accueil</h2>
+        <input type="file" id="backgroundInput" accept="image/*">
+        <button onclick="removeBackground()" class="btn danger-btn">Retirer l’image de fond</button>
+    </section>
+
+    <section class="admin-card">
+        <h2>Informations personnelles</h2>
+        <label>Nom complet</label>
+        <input type="text" id="nomInput">
+
+        <label>Description d’accueil</label>
+        <textarea id="descriptionInput"></textarea>
+
+        <label>Texte À propos</label>
+        <textarea id="aproposInput"></textarea>
+
+        <label>Email</label>
+        <input type="text" id="emailInput">
+
+        <label>WhatsApp</label>
+        <input type="text" id="whatsappInput">
+
+        <label>LinkedIn</label>
+        <input type="text" id="linkedinInput">
+
+        <label>GitHub</label>
+        <input type="text" id="githubInput">
+
+        <button onclick="saveProfile()" class="btn primary">Enregistrer les informations</button>
+    </section>
+
+    <section class="admin-card">
+        <h2 id="projectFormTitle">Ajouter un projet</h2>
+
+        <input type="hidden" id="editingIndex" value="">
+
+        <label>Nom du projet</label>
+        <input type="text" id="projectTitle" placeholder="Exemple : Secure Vote">
+
+        <label>Description du projet</label>
+        <textarea id="projectDescription" placeholder="Décris ton projet ici..."></textarea>
+
+        <label>Technologies utilisées</label>
+        <input type="text" id="projectTech" placeholder="PHP • MySQL • Bootstrap">
+
+        <label>Lien GitHub</label>
+        <input type="text" id="projectLink" placeholder="https://github.com/...">
+
+        <label>Image du projet</label>
+        <input type="file" id="projectImage" accept="image/*">
+
+        <p class="small-note">Si tu modifies un ancien projet et que tu ne choisis pas une nouvelle image, l’ancienne image sera conservée.</p>
+
+        <button onclick="saveProjectForm()" class="btn primary" id="saveProjectBtn">Ajouter le projet</button>
+        <button onclick="cancelEdit()" class="btn secondary-admin" type="button">Annuler</button>
+    </section>
+
+    <section class="admin-card">
+        <h2>Projets enregistrés</h2>
+        <div id="adminProjectsList"></div>
+    </section>
+
+    <section class="admin-card">
+        <h2>Réinitialiser</h2>
+        <button onclick="resetPortfolio()" class="btn danger-btn">Réinitialiser le portfolio</button>
+    </section>
+</main>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

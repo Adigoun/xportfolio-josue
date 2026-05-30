@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josue Adigoun | Portfolio Développeur Web</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Josue<span>Dev</span></div>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html" class="admin-link">Modifier</a>
+    </nav>
+</header>
+
+<section id="accueil" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <p class="badge">Junior Full Stack Web Developer</p>
+        <h1>Bonjour, je suis <span id="nomHero">Josue Adigoun</span></h1>
+        <p id="descriptionHero"></p>
+        <div class="buttons">
+            <a href="#projets" class="btn primary">Voir mes projets</a>
+            <a href="#contact" class="btn secondary">Me contacter</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="avatar">JA</div>
+        <h2 id="nomCarte">Josue Adigoun</h2>
+        <p>PHP • MySQL • Java • C++</p>
+    </div>
+</section>
+
+<section id="apropos" class="section">
+    <h2>À propos de moi</h2>
+    <p id="aproposTexte"></p>
+</section>
+
+<section id="competences" class="section">
+    <h2>Compétences techniques</h2>
+    <div class="skills">
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Bootstrap</span>
+        <span>Java</span>
+        <span>C++</span>
+        <span>UML</span>
+        <span>GitHub</span>
+        <span>CRUD</span>
+        <span>Architecture MVC</span>
+    </div>
+</section>
+
+<section id="projets" class="section">
+    <h2>Mes projets</h2>
+    <div id="projectsContainer" class="projects"></div>
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Tu peux me contacter pour une opportunité, un stage, une mission freelance ou une collaboration.</p>
+
+    <div class="contact-box">
+        <p><strong>Email :</strong> <span id="emailContact"></span></p>
+        <p><strong>WhatsApp :</strong> <span id="whatsappContact"></span></p>
+        <p><strong>Localisation :</strong> Cotonou, Bénin</p>
+        <p><strong>LinkedIn :</strong> <span id="linkedinContact"></span></p>
+        <p><strong>GitHub :</strong> <span id="githubContact"></span></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Josue Adigoun — Portfolio Développeur Web</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
